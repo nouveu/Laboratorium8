@@ -21,7 +21,6 @@
             </intent-filter>
         </receiver>
 
-        <!-- TODO dodać conajmniej dodatkowe BroadcastReceiver'y -->
         <receiver android:name=".BatteryBroadcastReceiver"  android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.BATTERY_LOW" />
@@ -34,8 +33,18 @@
             </intent-filter>
         </receiver>
 
+        <!-- TODO dodać conajmniej dodatkowe BroadcastReceiver'y -->
+        <receiver android:name=".PowerConnectionBroadcastReceiver"  android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+            </intent-filter>
+        </receiver>
+
         <service android:name=".TimerService" android:exported="false" />
 
         <!-- TODO dodać nową usługę -->
+        <service android:name=".BatteryTimerService" android:exported="false" />
+
     </application>
 </manifest>
