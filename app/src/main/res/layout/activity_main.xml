@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="pl.edu.pwr.wiz.wzorlaboratorium8.MainActivity">
+
+    <TextView
+        android:id="@+id/stan_baterii"
+        android:text="@string/stan_baterii"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/stan_baterii"
+        android:layout_marginEnd="33dp"
+        android:layout_marginTop="31dp"
+        android:id="@+id/stan_progressbar"
+        android:max="100"
+        android:progress="0"
+        android:visibility="invisible"
+        />
+
+    <Button
+        android:id="@+id/btn_start"
+        android:text="@string/counter_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:layout_below="@+id/stan_progressbar"
+        android:onClick="startTimer" />
+
+    <Button
+        android:id="@+id/button2"
+        android:text="@string/counter_stop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
+        android:layout_alignBaseline="@id/btn_start"
+        android:layout_alignBottom="@id/btn_start"
+        android:layout_toEndOf="@id/btn_start"
+        android:onClick="stopTimer" />
+
+    <!-- Dodać pola TextView i Button -->
+</RelativeLayout>

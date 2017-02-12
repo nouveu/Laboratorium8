@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Laboratorium 8</string>
+    <string name="stan_baterii">Stan baterii</string>
+
+    <string name="counter_title">Licznik czasu</string>
+    <string name="counter_body">Minęło: </string>
+    <string name="counter_start">Licznik start</string>
+    <string name="counter_stop">Licznik stop</string>
+</resources>
